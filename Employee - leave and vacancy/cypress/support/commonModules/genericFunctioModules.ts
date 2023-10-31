@@ -11,7 +11,6 @@ class genericFunctoinModules {
       .find(rowSelector)
       .filter(`:contains(${searchMap})`)
       .should("exist");
-      
   }
 }
 

@@ -8,6 +8,7 @@ export let empId: any;
 const employeeObj: Employee = new Employee();
 export let vacancyID: any;
 export let jobId: any;
+
 let filePath: string = "cypress/fixtures/vacancy.txt";
 let vacancyFileName: any = filePath.lastIndexOf("/");
 let searchMap: any = {
@@ -17,6 +18,7 @@ let searchMap: any = {
   comment: "",
   Actions: ".oxd-table-cell-actions",
 };
+
 before(function () {
   employeeObj.loginFUNC("Admin", "admin123");
   apiHelpers.addEmployee().then((resolve) => {

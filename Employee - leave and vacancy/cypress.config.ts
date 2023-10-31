@@ -2,7 +2,6 @@ const { defineConfig } = require("cypress");
 import * as XLSX from "xlsx";
 import * as path from "path";
 import { writeFileSync } from "fs";
-
 module.exports = defineConfig({
   e2e: {
     env: {

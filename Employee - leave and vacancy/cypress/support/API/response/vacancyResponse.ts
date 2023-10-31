@@ -21,5 +21,4 @@ export interface VacancyResponse {
   };
   meta: [];
   rels: [];
-  
 }

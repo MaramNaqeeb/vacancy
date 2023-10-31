@@ -11,7 +11,6 @@ export interface LeaveResponse {
   meta: {
     empNumber: number;
   };
-  rels: [];
-  
+  rels: []; 
 }
 

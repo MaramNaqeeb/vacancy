@@ -49,7 +49,6 @@ class Employee {
       .then((userInfo) => {
         expect(userInfo[0]['task1']).to.equal("reading");
       });
-      
   }
   assertVacancyUploadedFile(
     tableSelector: string,

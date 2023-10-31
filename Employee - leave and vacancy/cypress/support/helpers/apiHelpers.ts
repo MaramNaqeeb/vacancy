@@ -61,7 +61,6 @@ export default class apiHelpers {
       approveLeaveData()
     );
   }
-
   static addJobTitle() {
     return new Cypress.Promise((resolve, reject) => {
       cy.jobTitle("POST", URLs.jobTitle, jobTitleData()).then((response) => {
@@ -71,6 +70,7 @@ export default class apiHelpers {
       });
     });
   }
+
   static addVacancy() {
     return new Cypress.Promise((resolve, reject) => {
       cy.vacancy("POST", URLs.vacancy, addVacancyData()).then((response) => {
@@ -79,5 +79,4 @@ export default class apiHelpers {
       });
     });
   }
-  
 }

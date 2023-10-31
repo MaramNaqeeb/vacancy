@@ -131,7 +131,6 @@ Cypress.Commands.add(
       .its("body");
   }
 );
-
 Cypress.Commands.add(
   "jobTitle",
   (method: string, requestUrl: string, jobTitlePayload: string) => {
@@ -147,7 +146,6 @@ Cypress.Commands.add(
       })
       .its("body");
   }
-  
 );
 
 Cypress.Commands.add(

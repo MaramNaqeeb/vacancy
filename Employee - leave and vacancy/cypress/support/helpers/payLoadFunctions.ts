@@ -6,7 +6,6 @@ import { EntitlementPayload } from "../API/payload/entitlementPayload";
 import { LeavePayload } from "../API/payload/leavePayload";
 import { ApproveLeavePayload } from "../API/payload/approveLeavePayload";
 import { VacancyPayload } from "../API/payload/vacancyPayload";
-import { vacancyID } from "../../e2e/OrangeHRM/addEmployee.spec.cy";
 import { JobTitlePayload } from "../API/payload/jobTitlePayload";
 import { jobId } from "../../e2e/OrangeHRM/addEmployee.spec.cy";
 export const employeeFirstName: string = `Ann`;
@@ -14,7 +13,9 @@ export const employeeLastName: string = `Hathaway ${generatingFunctions.randomNu
 const employeeId: any = `${generatingFunctions.randomNumber()}`;
 export const username: string = `Johnj${generatingFunctions.randomNumber()}`;
 export const password: string = `123qwe,./${generatingFunctions.randomNumber()}`;
+
 const leaveID: number = Math.floor(Math.random() * 10);
+
 
 export const newEmployeeData = (e?: EmployeePayload): any => {
   let employee: any = {
