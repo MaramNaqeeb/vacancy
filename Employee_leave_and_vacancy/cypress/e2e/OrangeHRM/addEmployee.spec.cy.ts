@@ -8,6 +8,7 @@ export let empId: any;
 const employeeObj: Employee = new Employee();
 export let vacancyID: any;
 export let jobId: any;
+
 let filePath: string = "cypress/fixtures/vacancy.txt";
 let vacancyFileName: any = filePath.lastIndexOf("/");
 let searchMap: any = {

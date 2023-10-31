@@ -63,7 +63,6 @@ Cypress.Commands.add(
       .its("body");
   }
 );
-
 Cypress.Commands.add(
   "user",
   (method: string, requestUrl: string, userPayload: string) => {

@@ -44,6 +44,7 @@ export default class apiHelpers {
     cy.entitlement("POST", URLs.entitlement, entitlementData());
   }
 
+  
   static addLeave() {
     return new Cypress.Promise((resolve, reject) => {
       cy.leave("POST", URLs.leave, leaveData()).then((response) => {

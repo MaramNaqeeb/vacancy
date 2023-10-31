@@ -24,6 +24,7 @@ class Employee {
       this.elements.password().type(password),
       this.elements.loginBTN().click({ force: true });
   }
+  
   logout() {
     this.elements.logoutDropdown().click();
     this.elements.logoutBtn().click({ multiple: true });

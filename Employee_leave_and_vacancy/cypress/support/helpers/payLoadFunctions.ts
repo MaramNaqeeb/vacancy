@@ -27,6 +27,7 @@ export const newEmployeeData = (e?: EmployeePayload): any => {
   };
   return employee;
 };
+
 export const newUserData = (u?: UserPayload): any => {
   let user: any = {
     empNumber: empId,
