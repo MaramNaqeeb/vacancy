@@ -1,13 +1,16 @@
+
 import apiHelpers from "../../support/helpers/apiHelpers";
 import Employee from "../../support/projectObject/employee";
 import { password, username } from "../../support/helpers/payLoadFunctions";
 import * as path from "path";
+
 
 export let id: any;
 export let empId: any;
 const employeeObj: Employee = new Employee();
 export let vacancyID: any;
 export let jobId: any;
+
 
 let filePath: string = "cypress/fixtures/vacancy.txt";
 let vacancyFileName: any = filePath.lastIndexOf("/");
@@ -18,6 +21,7 @@ let searchMap: any = {
   comment: "",
   Actions: ".oxd-table-cell-actions",
 };
+
 before(function () {
   employeeObj.loginFUNC("Admin", "admin123");
   apiHelpers.addEmployee().then((resolve) => {
@@ -28,6 +32,7 @@ before(function () {
   employeeObj.logout();
 });
 
+
 describe("OrangeHRM-addEmployee and Entitlement-prerequisite", () => {
   beforeEach(function () {
     employeeObj.loginFUNC(username, password);
@@ -36,6 +41,7 @@ describe("OrangeHRM-addEmployee and Entitlement-prerequisite", () => {
       employeeObj.logout();
     });
   });
+
 
   it("TCs1: Check leave in the leave grid ", () => {
     employeeObj.loginFUNC("Admin", "admin123");
@@ -46,6 +52,7 @@ describe("OrangeHRM-addEmployee and Entitlement-prerequisite", () => {
     employeeObj.assertLeave("Scheduled");
   });
 });
+
 describe("OrangeHRM-addEmployee and addVacancy-prerequisite", () => {
   beforeEach(function () {
     employeeObj.loginFUNC("Admin", "admin123");
@@ -57,6 +64,7 @@ describe("OrangeHRM-addEmployee and addVacancy-prerequisite", () => {
     });
   });
 
+
   it.only("TCs1: upload vacancy file", () => {
     let filePath: string = "cypress/fixtures/task.xlsx";
     employeeObj.uploadVacancyFile(filePath);
@@ -64,4 +72,6 @@ describe("OrangeHRM-addEmployee and addVacancy-prerequisite", () => {
     const jsonName: string = path.basename(xlsxPath).replace("xlsx", "json");
     employeeObj.downloadFile(xlsxPath, jsonName);
   });
+
 });
+

@@ -12,6 +12,5 @@ export interface LeaveResponse {
     empNumber: number;
   };
   rels: [];
-  
 }
 

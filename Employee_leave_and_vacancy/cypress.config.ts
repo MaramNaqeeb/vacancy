@@ -4,6 +4,7 @@ import * as XLSX from "xlsx";
 import * as path from "path";
 import { writeFileSync } from "fs";
 
+
 module.exports = defineConfig({
   e2e: {
     env: {
@@ -11,6 +12,7 @@ module.exports = defineConfig({
       snapshotOnly: true,
       download_dir: "./cypress/downloads",
     },
+
     specPattern: "cypress/e2e/**/*.{js,jsx,ts,tsx}",
     setupNodeEvents(on: any, config: any) {
       on("task", {
@@ -24,8 +26,11 @@ module.exports = defineConfig({
           return null;
         },
       });
+
     },
     
     baseUrl: "https://opensource-demo.orangehrmlive.com",
   },
+  
 });
+

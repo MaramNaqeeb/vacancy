@@ -37,6 +37,5 @@ export interface EntitlementResponse {
     empNumber: number;
   };
   rels: [];
-  
 }
 

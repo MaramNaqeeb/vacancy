@@ -1,4 +1,5 @@
 const baseUrl = Cypress.config().baseUrl;
+
 import {
   approveLeaveData,
   entitlementData,
@@ -8,6 +9,7 @@ import {
   addVacancyData,
   jobTitleData,
 } from "./payLoadFunctions";
+
 
 let empId: any;
 export let userId: number;
@@ -25,6 +27,7 @@ export const URLs = {
   vacancy: `${baseUrl}/web/index.php/api/v2/recruitment/vacancies`,
 };
 
+
 export default class apiHelpers {
   static addEmployee() {
     return new Cypress.Promise((resolve, reject) => {
@@ -34,17 +37,18 @@ export default class apiHelpers {
           resolve(empId);
         })
 
+
         .then(() => cy.user("POST", URLs.user, newUserData()))
         .then((response) => {
           userId = response.data.userRole.id;
         });
     });
   }
+
   static addEntitlement() {
     cy.entitlement("POST", URLs.entitlement, entitlementData());
   }
 
-  
   static addLeave() {
     return new Cypress.Promise((resolve, reject) => {
       cy.leave("POST", URLs.leave, leaveData()).then((response) => {
@@ -55,6 +59,7 @@ export default class apiHelpers {
       });
     });
   }
+
   static approveLeave(id: any) {
     cy.approveLeave(
       "PUT",
@@ -62,6 +67,7 @@ export default class apiHelpers {
       approveLeaveData()
     );
   }
+
 
   static addJobTitle() {
     return new Cypress.Promise((resolve, reject) => {
@@ -72,6 +78,7 @@ export default class apiHelpers {
       });
     });
   }
+
   static addVacancy() {
     return new Cypress.Promise((resolve, reject) => {
       cy.vacancy("POST", URLs.vacancy, addVacancyData()).then((response) => {
@@ -80,4 +87,5 @@ export default class apiHelpers {
       });
     });
   }
+
 }
