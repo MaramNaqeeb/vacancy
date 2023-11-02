@@ -5,6 +5,7 @@ import { JobTitleResponse } from "../API/response/jobTitleResponse";
 import { LeaveResponse } from "../API/response/leaveResponse";
 import { UserResponse } from "../API/response/userResponse";
 import { VacancyResponse } from "../API/response/vacancyResponse";
+
 declare global {
   namespace Cypress {
     interface Chainable {
@@ -47,6 +48,7 @@ declare global {
   }
 }
 
+
 Cypress.Commands.add(
   "employee",
   (method: string, requestUrl: string, employeePayload: string) => {
@@ -81,6 +83,7 @@ Cypress.Commands.add(
   }
 );
 
+
 Cypress.Commands.add(
   "entitlement",
   (method: string, requestUrl: string, entitlementPayload: string) => {
@@ -97,6 +100,7 @@ Cypress.Commands.add(
       .its("body");
   }
 );
+
 
 Cypress.Commands.add(
   "leave",
@@ -115,6 +119,7 @@ Cypress.Commands.add(
   }
 );
 
+
 Cypress.Commands.add(
   "approveLeave",
   (method: string, requestUrl: string, approveLeavePayload: string) => {
@@ -131,6 +136,7 @@ Cypress.Commands.add(
       .its("body");
   }
 );
+
 
 Cypress.Commands.add(
   "jobTitle",
@@ -149,6 +155,7 @@ Cypress.Commands.add(
   }
 );
 
+
 Cypress.Commands.add(
   "vacancy",
   (method: string, requestUrl: string, vacancyPayload: string) => {
@@ -164,4 +171,5 @@ Cypress.Commands.add(
       })
       .its("body");
   }
+  
 );

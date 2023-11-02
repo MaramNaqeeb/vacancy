@@ -6,16 +6,16 @@ import { EntitlementPayload } from "../API/payload/entitlementPayload";
 import { LeavePayload } from "../API/payload/leavePayload";
 import { ApproveLeavePayload } from "../API/payload/approveLeavePayload";
 import { VacancyPayload } from "../API/payload/vacancyPayload";
-import { vacancyID } from "../../e2e/OrangeHRM/addEmployee.spec.cy";
 import { JobTitlePayload } from "../API/payload/jobTitlePayload";
 import { jobId } from "../../e2e/OrangeHRM/addEmployee.spec.cy";
-import { userId } from "./apiHelpers";
+
 export const employeeFirstName: string = `Ann`;
 export const employeeLastName: string = `Hathaway ${generatingFunctions.randomNumber()}`;
 const employeeId: any = `${generatingFunctions.randomNumber()}`;
 export const username: string = `Johnj${generatingFunctions.randomNumber()}`;
 export const password: string = `123qwe,./${generatingFunctions.randomNumber()}`;
 const leaveID: number = Math.floor(Math.random() * 10);
+
 
 export const newEmployeeData = (e?: EmployeePayload): any => {
   let employee: any = {
@@ -27,6 +27,8 @@ export const newEmployeeData = (e?: EmployeePayload): any => {
   };
   return employee;
 };
+
+
 export const newUserData = (u?: UserPayload): any => {
   let user: any = {
     empNumber: empId,
@@ -38,6 +40,7 @@ export const newUserData = (u?: UserPayload): any => {
   return user;
 };
 
+
 export const entitlementData = (e?: EntitlementPayload): any => {
   let entitle: any = {
     empNumber: empId,
@@ -48,6 +51,7 @@ export const entitlementData = (e?: EntitlementPayload): any => {
   };
   return entitle;
 };
+
 export const leaveData = (l?: LeavePayload): any => {
   let leave: any = {
     comment: null,
@@ -61,12 +65,14 @@ export const leaveData = (l?: LeavePayload): any => {
   };
   return leave;
 };
+
 export const approveLeaveData = (a?: ApproveLeavePayload): any => {
   let approve: any = {
     action: "APPROVE",
   };
   return approve;
 };
+
 export const jobTitleData = (j?: JobTitlePayload): any => {
   let job: any = {
     description: "",
@@ -76,6 +82,7 @@ export const jobTitleData = (j?: JobTitlePayload): any => {
   };
   return job;
 };
+
 export const addVacancyData = (v?: VacancyPayload): any => {
   let vacancy: any = {
     description: "",
@@ -87,6 +94,7 @@ export const addVacancyData = (v?: VacancyPayload): any => {
     status: true,
   };
   return vacancy;
+  
 };
 
 
